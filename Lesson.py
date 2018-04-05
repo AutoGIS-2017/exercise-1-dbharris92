@@ -28,7 +28,7 @@ point_dist = point1.distance(point2)
 ### create lines
 line = LineString([point1, point2, point3])
 
-### can also create a typle for same outcome
+### can also create a tuple for same outcome
 lineTuple = LineString([(2.2, 4.2), (7.2, -25.1), (9.26, -2.456)])
 
 ### extract coordinates from linestring (x and y coords become separate tuples)
