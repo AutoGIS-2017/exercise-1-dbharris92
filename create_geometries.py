@@ -18,9 +18,9 @@ def createPointGeom(x_coord, y_coord):
 vertices = [Point(2.2, 4.2), Point(7.2, -25.1), Point(9.26, -2.456)]
 
 # function 
-def createLineGeom(inList):
-    if all(isinstance(x, Point) for x in inList) is True:
-       return LineString(inList)
+def createLineGeom(points):
+    if all(isinstance(x, Point) for x in points):
+       return LineString(points)
     else:
         return 'pointList must contain shapely point object(s)'
 my_Line = createLineGeom(vertices)
@@ -34,7 +34,7 @@ point3 = Point(9.26, -2.456)
 
 point_coords = ((point1.coords), (point2.coords), (point3.coords)) 
 
-# function (partially solved)
+# function 
 def createPolyGeom(givePoly):
     for x in givePoly:
         return Polygon([[p.x, p.y] for p in givePoly])
