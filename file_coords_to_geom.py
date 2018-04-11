@@ -28,8 +28,29 @@ origPoints = []
 destPoints = []
 
 # Task 4, iterate over lists to make shapely point objects
-for i in dF.itertuples():
-    origPoints.append(Point(dF.from_x, dF.from_y))
+for index, row in dF.iterrows():
+    origPoints.append(Point(row['from_x'], row['from_y']))
+    destPoints.append(Point(row['to_x'], row['to_y']))
+
+#################
+### Problem 4 ###   
+#################
+"""
+1. Create a list called lines
+2. Iterate over the origin and destination lists and create a Shapely LineString -object between the origin and destination point
+3. Add that line into the lines -list.
+4. Find out what is the average (Euclidian) distance of all the origin-destination LineStrings that we just created, and print it out.
+5. To make things more reusable: write creation of the LineString and calculating the average distance into dedicated functions and use them.       
+"""
+
+# Task 1
+lines= []
+
+# Task 2/5
+
+def makeLine(origin, destination):
+    
+    
     
     
     
